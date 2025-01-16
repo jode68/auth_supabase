@@ -1,5 +1,6 @@
 import 'package:auth_supabase/auth/auth_gate.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -11,7 +12,7 @@ void main() async {
     url: 'https://rkigwzcqcgbdcngyshgn.supabase.co',
   );
   runApp(
-    const MainApp(),
+    ProviderScope(child: MainApp()),
   );
 }
 
