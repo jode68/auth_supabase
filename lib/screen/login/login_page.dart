@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
         Get.snackbar(
           'Error',
           e.toString(),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.green,
           colorText: Colors.white,
           snackPosition: SnackPosition.BOTTOM,
         );
