@@ -13,14 +13,17 @@ class AuthGate extends StatelessWidget {
       stream: Supabase.instance.client.auth.onAuthStateChange,
       builder: (context, snapshot) {
         final session = snapshot.hasData ? snapshot.data!.session : null;
-        if (session != null) {
+        if (session != null ||
+            snapshot.connectionState == ConnectionState.waiting) {
           return ProfilePage();
         }
         return FlutterLogin(
-          logo: const AssetImage('assets/images/supabase.png'),
+          logoTag: 'logo',
+          titleTag: 'title',
           savedEmail: 'xumepao@yahoo.it',
           savedPassword: '12345678',
           title: 'Autenticazione',
+          logo: const AssetImage('assets/images/supabase.png'),
           footer: 'Powered by Flutter & Supabase',
           hideForgotPasswordButton: false,
           onLogin: onLogin,
