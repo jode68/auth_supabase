@@ -17,29 +17,25 @@ class BasePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(32),
         children: [
-          SizedBox(height: 32),
+          SizedBox(height: 48),
           Container(
             decoration: BoxDecoration(
-              color: Colors.green.shade600,
+              //color: Colors.green.shade400,
               shape: BoxShape.circle,
-              border: Border.all(
-                color: Colors.white,
-                width: 2,
-              ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 8,
+                  color: Colors.green.shade600,
+                  blurRadius: 64,
                 ),
               ],
             ),
             height: 250,
             child: Image.asset(
-              'assets/images/supabase.png',
+              'assets/images/globe.png',
               fit: BoxFit.contain,
             ),
           ),
-          SizedBox(height: 32),
+          SizedBox(height: 64),
           SupaEmailAuth(
             onSignInComplete: (response) {},
             onSignUpComplete: (response) {},
