@@ -1,8 +1,7 @@
-import 'package:auth_supabase/auth/auth_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_login/flutter_login.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:auth_supabase/screen/profile/profile_page.dart';
+import 'package:auth_supabase/screen/start/start_page.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -19,19 +18,7 @@ class AuthGate extends StatelessWidget {
         if (session != null) {
           return ProfilePage();
         }
-        return FlutterLogin(
-          logoTag: 'logo',
-          titleTag: 'title',
-          savedEmail: 'xumepao@yahoo.it',
-          savedPassword: '12345678',
-          title: 'Autenticazione',
-          logo: const AssetImage('assets/images/supabase.png'),
-          footer: 'Powered by Flutter & Supabase',
-          hideForgotPasswordButton: false,
-          onLogin: onLogin,
-          onRecoverPassword: onRecoverPassword,
-          onSignup: onSignup,
-        );
+        return StartPage();
       },
     );
   }
