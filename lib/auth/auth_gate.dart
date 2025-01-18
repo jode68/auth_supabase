@@ -1,7 +1,7 @@
+import 'package:auth_supabase/screen/base/base_page.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:auth_supabase/screen/profile/profile_page.dart';
-import 'package:auth_supabase/screen/start/start_page.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -18,7 +18,7 @@ class AuthGate extends StatelessWidget {
         if (session != null) {
           return ProfilePage();
         }
-        return StartPage();
+        return BasePage();
       },
     );
   }
