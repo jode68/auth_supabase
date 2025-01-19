@@ -17,7 +17,7 @@ class BasePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(32),
         children: [
-          SizedBox(height: 48),
+          SizedBox(height: 32),
           Container(
             decoration: BoxDecoration(
               //color: Colors.green.shade400,
