@@ -25,7 +25,6 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Auth Supabase',
       theme: ThemeData(primarySwatch: Colors.blue),
-      // home: LoginPage(),
       home: AuthGate(),
     );
   }
